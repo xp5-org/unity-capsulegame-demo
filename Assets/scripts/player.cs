@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
+    private bool jumpKeyWasPressed;
+    private float horizontalInput;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Application.targetFrameRate = 30;
     }
 
     // Update is called once per frame
@@ -16,13 +19,20 @@ public class player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * 3, ForceMode.VelocityChange);
+            jumpKeyWasPressed = true;
 
         }
 
+        horizontalInput = Input.GetAxis("Horizontal");
     }
     private void FixedUpdate()
     {
-        
+        if (jumpKeyWasPressed)
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.up * 3, ForceMode.VelocityChange);
+            jumpKeyWasPressed = false;
+        }
+        GetComponent<Rigidbody>().velocity = new Vector3(horizontalInput, GetComponent<Rigidbody>().velocity.y, 0);
+
     }
 }
