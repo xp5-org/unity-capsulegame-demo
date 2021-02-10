@@ -1,6 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - EscMenuExitButton
+    - EscMenuOptionsButton
     - PauseMenu
     - eyeLook
     - playerJump
@@ -51,29 +53,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 13830}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 13870}
+      Script: {instanceID: 11454}
     - Class: 114
-      Script: {instanceID: 14240}
+      Script: {instanceID: 11826}
     - Class: 114
-      Script: {instanceID: 14256}
+      Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 14446}
+      Script: {instanceID: 12036}
     - Class: 114
-      Script: {instanceID: 14638}
+      Script: {instanceID: 12228}
     - Class: 114
-      Script: {instanceID: 14796}
+      Script: {instanceID: 12386}
     - Class: 114
-      Script: {instanceID: 15102}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 15266}
+      Script: {instanceID: 12874}
     - Class: 114
-      Script: {instanceID: 15414}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 15452}
+      Script: {instanceID: 13060}
+    - Class: 114
+      Script: {instanceID: 13622}
+    - Class: 114
+      Script: {instanceID: 15232}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -104,17 +110,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 13830}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 13870}
+      Script: {instanceID: 11454}
     - Class: 114
-      Script: {instanceID: 14638}
+      Script: {instanceID: 12228}
     - Class: 114
-      Script: {instanceID: 14796}
+      Script: {instanceID: 12386}
     - Class: 114
-      Script: {instanceID: 15102}
+      Script: {instanceID: 12708}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -576,8 +582,20 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EscMenuOptionsButton
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EscMenuExitButton
   platform: 5
   scenePathNames:
   - Assets/Scenes/game.unity
   - Assets/scripts/Menu.unity
-  playerPath: C:/Users/kyle/Desktop/test/new_3d_project.exe
+  playerPath: C:/Users/user/Desktop/test/capsure game demo.exe
