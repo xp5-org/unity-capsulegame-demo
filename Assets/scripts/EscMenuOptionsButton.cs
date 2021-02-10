@@ -22,6 +22,9 @@ public class EscMenuOptionsButton : MonoBehaviour
         string jsonResponse = reader.ReadToEnd();
         Debug.Log(jsonResponse);
 
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.transform.position = new Vector3(0, 0.5f, 0);
+
         Transform[] allChildren = GetComponentsInChildren<Transform>();
         foreach (Transform child in allChildren)
         {
