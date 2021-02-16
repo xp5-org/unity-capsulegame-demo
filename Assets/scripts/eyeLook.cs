@@ -34,8 +34,8 @@ public class eyeLook : MonoBehaviour
 		}
 
 
-		float movement = Input.GetAxis("Vertical");
-		movement *= Time.deltaTime;
+		// float movement = Input.GetAxis("Vertical");
+		// movement *= Time.deltaTime;
 
 		// How much has the mouse moved?
 		Vector2 mC = new Vector2
@@ -49,7 +49,6 @@ public class eyeLook : MonoBehaviour
 			mD += mC;
 		}
 		else
-			// mD.y -= mC.y * 3f;
 			mD += mC;
 		// Multiply by 3f in order to create a little 'bounce'
 		// so that user does not rotate beyond threshold.
@@ -71,8 +70,9 @@ public class eyeLook : MonoBehaviour
 		this.transform.localRotation = qR *
 					Quaternion.AngleAxis(-mD.y, Vector3.right);
 
-		this.transform.Translate
-			(Vector3.forward * movement);
+		// this is now handled under the networkbehavior class in playernetwork.cs
+		// this.transform.Translate
+		//	(Vector3.forward * movement);
 
 	}
 }

@@ -790,4 +790,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/game.unity
-  playerPath: C:/Users/kyle/Desktop/testgame3/capsule game demo.exe
+  playerPath: C:/Users/kyle/Desktop/testgame6/capsule game demo.exe

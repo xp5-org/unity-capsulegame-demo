@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerNetwork : NetworkBehaviour
 {
+    private bool jumpKeyWasPressed;
+    private float horizontalInput;
     // Start is called before the first frame update
     void HandleMovement()
     {
@@ -16,9 +18,6 @@ public class PlayerNetwork : NetworkBehaviour
             float sideStep = Input.GetAxis("Horizontal");
             sideStep *= Time.deltaTime;
 
-            //		this.transform.Translate
-            //		(Vector3.forward * movement);
-
             if (this.GetComponent<Rigidbody>().
                 velocity.magnitude < 5f)
             {
@@ -26,12 +25,18 @@ public class PlayerNetwork : NetworkBehaviour
             (this.transform.forward * movement * 1000f);
             }
 
+
             this.transform.Translate
-            (Vector3.right * sideStep);
-            //  float moveHorizontal = Input.GetAxis("Horizontal");
-            //  float moveVertical = Input.GetAxis("Vertical");
-            //  Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0);
-            //  transform.position = transform.position + movement;
+            (Vector3.right * sideStep * 3f);
+            this.transform.Translate
+            (Vector3.forward * movement * 3f);
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                // jumpKeyWasPressed = true;
+                GetComponent<Rigidbody>().AddForce(Vector3.up * 3, ForceMode.VelocityChange);
+                GetComponent<Rigidbody>().velocity = new Vector3(horizontalInput, GetComponent<Rigidbody>().velocity.y, 0);
+            }
         }
     }
 
