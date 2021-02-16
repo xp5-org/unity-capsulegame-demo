@@ -8,7 +8,6 @@ public class walk : MonoBehaviour
 
 	void Update()
 	{
-
 		float movement = Input.GetAxis("Vertical");
 		movement *= Time.deltaTime;
 

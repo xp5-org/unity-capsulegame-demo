@@ -23,13 +23,7 @@ public class EscMenuOptionsButton : MonoBehaviour
         Debug.Log(jsonResponse);
 
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.transform.position = new Vector3(0, 0.5f, 0);
-
-        Transform[] allChildren = GetComponentsInChildren<Transform>();
-        foreach (Transform child in allChildren)
-        {
-            child.gameObject.SetActive(false);
-        }
+        cube.transform.position = new Vector3(0, 1.25f, -4);
 
     }
 }
