@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class eyeLook : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class eyeLook : MonoBehaviour
 
 	void Update()
 	{
+
 
 		//bool clampMe = false;
 
@@ -75,4 +77,22 @@ public class eyeLook : MonoBehaviour
 		//	(Vector3.forward * movement);
 
 	}
+}
+
+public class PlayerMovement : NetworkBehaviour
+{
+    public override void OnStartClient()
+	{
+		Cursor.lockState = CursorLockMode.Locked;
+
+		if (!isLocalPlayer)
+		{
+			//I also disabled this component so it also doesn't move the other player
+			enabled = false;
+			var camera = transform.Find("EyesCamera");
+			camera.GetComponent<Camera>().enabled = false;
+			camera.GetComponent<AudioListener>().enabled = false;
+		}
+
+    }
 }
